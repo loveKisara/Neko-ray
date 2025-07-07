@@ -512,6 +512,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
 
+        R.id.intelligent_selection_all -> {
+            mainViewModel.createIntelligentSelectionAll()
+            true
+        }
+
         R.id.service_restart -> {
             restartV2Ray()
             true

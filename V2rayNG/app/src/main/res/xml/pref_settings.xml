@@ -318,12 +318,22 @@
         <ListPreference
             android:defaultValue="1"
             android:icon="@drawable/ic_domain_24"
-            android:layout="@layout/uwu_bot"
+            android:layout="@layout/uwu_mid"
             android:entries="@array/outbound_domain_resolve_method"
             android:entryValues="@array/outbound_domain_resolve_method_value"
             android:key="pref_outbound_domain_resolve_method"
             android:summary="%s"
             android:title="@string/title_outbound_domain_resolve_method" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:layout="@layout/uwu_bot"
+            android:icon="@drawable/intelligent"
+            android:entries="@array/intelligent_selection_method"
+            android:entryValues="@array/intelligent_selection_method_value"
+            android:key="pref_intelligent_selection_method"
+            android:summary="%s"
+            android:title="@string/title_intelligent_selection_method" />
 
     </PreferenceCategory>
 
