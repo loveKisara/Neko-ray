@@ -6,7 +6,7 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    target-branch: dev
+    target-branch: main
     schedule:
       interval: weekly
       timezone: Asia/Jakarta
@@ -14,7 +14,7 @@ updates:
 
   - package-ecosystem: gradle
     directory: /V2rayNG
-    target-branch: dev
+    target-branch: main
     schedule:
       interval: weekly
       timezone: Asia/Jakarta
