@@ -83,7 +83,9 @@ android {
 
     sourceSets["main"].jniLibs.srcDirs("libs")
 
-    kotlinOptions.jvmTarget = JavaVersion.VERSION_17.toString()
+    kotlin {
+        jvmToolchain(17)
+    }
 
     applicationVariants.all {
         val versionCodes = mapOf(
