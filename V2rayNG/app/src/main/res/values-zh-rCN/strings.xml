@@ -447,5 +447,7 @@
     <string name="uwu_hostcheck_result">Results :</string>
     <string name="uwu_hostname_finder_tittle">Hostname Finder</string>
     <string name="uwu_hostname_finder_summary">Find Other Websites Hosted on a Web Server Here</string>
+    <string name="uwu_support_title">Support Neko-Ray</string>
+    <string name="uwu_support_summary">Give a little donation to the Neko-Ray developers</string>
     <!-- Neko strings -->
 </resources>

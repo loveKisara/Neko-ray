@@ -554,5 +554,7 @@
     <string name="indicator_style_title">Select Indicator Style</string>
     <string name="pref_indicator_style_title">Server Indicator Style</string>
     <string name="pref_indicator_style_summary">Select the active server indicator display</string>
+    <string name="uwu_support_title">Support Neko-Ray</string>
+    <string name="uwu_support_summary">Give a little donation to the Neko-Ray developers</string>
     <!-- Neko strings -->
 </resources>

@@ -19,6 +19,7 @@ import com.neko.changelog.ChangelogAdapter
 import com.neko.changelog.ChangelogEntry
 import com.neko.nointernet.callbacks.ConnectionCallback
 import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
+import com.neko.support.NekoSupportActivity
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
@@ -104,6 +105,11 @@ class NekoAboutActivity : BaseActivity(), InstallPermissionCallback {
     // Open credits activity
     fun uwuCredits(view: View) {
         startActivity(Intent(this, CreditsActivity::class.java))
+    }
+
+    // Open sopport activity
+    fun uwuSupport(view: View) {
+        startActivity(Intent(this, NekoSupportActivity::class.java))
     }
 
     // Show changelog bottom sheet
