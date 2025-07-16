@@ -86,12 +86,22 @@ class ThemeEngine private constructor(private val context: Context) {
             prefs.edit { putString(KEY_INDICATOR_STYLE, value.name) }
         }
 
+    var fontSize: FontSize
+        get() {
+            val name = prefs.getString(KEY_FONT_SIZE, FontSize.DEFAULT.name)!!
+            return FontSize.valueOf(name)
+        }
+        set(value) {
+            prefs.edit { putString(KEY_FONT_SIZE, value.name) }
+        }
+
     private fun setDefaultValues() {
         isTrueBlack = context.getBooleanSafe(R.bool.true_black, false)
         themeMode = context.getIntSafe(R.integer.theme_mode, ThemeMode.AUTO)
         staticTheme = Theme.Indigo
         isDynamicTheme = context.getBooleanSafe(R.bool.dynamic_theme, hasS()) && hasS()
         indicatorStyle = IndicatorStyle.UWU
+        fontSize = FontSize.DEFAULT
     }
 
     companion object {
@@ -134,5 +144,6 @@ class ThemeEngine private constructor(private val context: Context) {
         private const val KEY_FIRST_START = "first_start"
         private const val KEY_APP_FONT = "app_font"
         private const val KEY_INDICATOR_STYLE = "indicator_style"
+        private const val KEY_FONT_SIZE = "font_size"
     }
 }

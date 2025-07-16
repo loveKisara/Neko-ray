@@ -556,5 +556,7 @@
     <string name="pref_indicator_style_summary">Select the active server indicator display</string>
     <string name="uwu_support_title">Support Neko-Ray</string>
     <string name="uwu_support_summary">Give a little donation to the Neko-Ray developers</string>
+    <string name="font_size">Font size</string>
+    <string name="font_size_summary">Change the size of text</string>
     <!-- Neko strings -->
 </resources>

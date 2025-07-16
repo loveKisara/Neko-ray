@@ -9,13 +9,16 @@ import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreferenceCompat
 import com.neko.themeengine.ContrastLevel
+import com.neko.themeengine.FontSize
+import com.neko.themeengine.FontSizeBottomSheet
 import com.neko.themeengine.IndicatorStyleBottomSheet
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.themeengine.hasS
 import com.neko.v2ray.R
 
-class ThemeSettingsFragment : PreferenceFragmentCompat() {
+class ThemeSettingsFragment : PreferenceFragmentCompat(),
+    FontSizeChangeListener {
 
     private lateinit var themeEngine: ThemeEngine
     private var contrastPref: DropDownPreference? = null
@@ -34,6 +37,7 @@ class ThemeSettingsFragment : PreferenceFragmentCompat() {
         setupDynamicThemeToggle(amoledPref)
         setupFontPreference()
         setupIndicatorStylePreference()
+        setupFontSizePreference()
     }
 
     private fun setupThemePicker() {
@@ -206,6 +210,17 @@ private fun setupContrastPreference() {
                 true
             }
         }
+    }
+
+    private fun setupFontSizePreference() {
+        findPreference<Preference>("font_size")?.setOnPreferenceClickListener {
+            FontSizeBottomSheet().show(childFragmentManager, "font_size")
+            true
+        }
+    }
+
+    override fun onFontSizeChanged(newSize: FontSize) {
+        requireActivity().recreate()
     }
 
     private fun setupIndicatorStylePreference() {

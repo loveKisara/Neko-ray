@@ -9,15 +9,22 @@ class FontContextWrapper(base: Context) : ContextWrapper(base) {
 
     companion object {
         fun wrap(context: Context): Context {
-            val appFont = ThemeEngine.getInstance(context).appFont
-        
+            val engine = ThemeEngine.getInstance(context)
+            val appFont = engine.appFont
+            val fontSize = engine.fontSize
+
+            val configuration = context.resources.configuration
+            configuration.fontScale = fontSize.scale
+
+            val newContext = context.createConfigurationContext(configuration)
+
             return if (appFont == AppFont.DEFAULT) {
                 resetSystemFont()
-                context
+                ContextWrapper(newContext)
             } else {
-                val typeface = ResourcesCompat.getFont(context, appFont.fontRes)
+                val typeface = ResourcesCompat.getFont(newContext, appFont.fontRes)
                 typeface?.let { overrideSystemFonts(it) }
-                FontContextWrapper(context)
+                FontContextWrapper(newContext)
             }
         }
 

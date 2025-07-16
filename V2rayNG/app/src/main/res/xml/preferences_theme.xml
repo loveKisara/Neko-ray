@@ -43,6 +43,13 @@
         android:defaultValue="DEFAULT"
         android:icon="@drawable/ic_font" />
 
+    <Preference
+        android:key="font_size"
+        android:layout="@layout/uwu_mid"
+        android:title="@string/font_size"
+        android:summary="@string/font_size_summary"
+        android:icon="@drawable/ic_text_size" />
+
     <SwitchPreferenceCompat
         android:key="amoled_mode"
         android:layout="@layout/uwu_mid_switch"

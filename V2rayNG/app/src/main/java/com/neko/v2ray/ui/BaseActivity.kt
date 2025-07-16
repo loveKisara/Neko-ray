@@ -11,6 +11,7 @@ import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.helper.CustomDividerItemDecoration
 import com.neko.v2ray.util.MyContextWrapper
 import com.neko.themeengine.AppFont
+import com.neko.themeengine.FontSize
 import com.neko.themeengine.FontContextWrapper
 import com.neko.themeengine.Theme
 import com.neko.themeengine.ThemeEngine
@@ -25,6 +26,7 @@ abstract class BaseActivity : AppCompatActivity() {
     private var lastKnownTrueBlack: Boolean = false
     private var lastKnownFont: AppFont? = null
     private var lastKnownDoubleColumn: Boolean = false
+    private var lastKnownFontSize: FontSize? = null
 
     override fun attachBaseContext(newBase: Context) {
         val localeWrapped = MyContextWrapper.wrap(newBase, SettingsManager.getLocale())
@@ -42,6 +44,7 @@ abstract class BaseActivity : AppCompatActivity() {
         lastKnownDynamic = engine.isDynamicTheme
         lastKnownTrueBlack = engine.isTrueBlack
         lastKnownFont = engine.appFont
+        lastKnownFontSize = engine.fontSize
         lastKnownDoubleColumn = MmkvManager.decodeSettingsBool(AppConfig.PREF_DOUBLE_COLUMN_DISPLAY, false)
     }
 
@@ -55,8 +58,9 @@ abstract class BaseActivity : AppCompatActivity() {
         val trueBlackChanged = engine.isTrueBlack != lastKnownTrueBlack
         val fontChanged = engine.appFont != lastKnownFont
         val doubleColumnChanged = MmkvManager.decodeSettingsBool(AppConfig.PREF_DOUBLE_COLUMN_DISPLAY, false) != lastKnownDoubleColumn
+        val fontSizeChanged = engine.fontSize != lastKnownFontSize
 
-        if (themeChanged || modeChanged || dynamicChanged || trueBlackChanged || fontChanged || doubleColumnChanged) {
+        if (themeChanged || modeChanged || dynamicChanged || trueBlackChanged || fontChanged || doubleColumnChanged || fontSizeChanged) {
             recreate()
         }
     }
