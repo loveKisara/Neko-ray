@@ -213,16 +213,26 @@ private fun setupContrastPreference() {
     }
 
     private fun setupFontSizePreference() {
-        findPreference<Preference>("font_size")?.setOnPreferenceClickListener {
+        val fontSizePref = findPreference<Preference>("font_size")
+        // Set initial summary
+        updateFontSizeSummary(fontSizePref)
+        
+        fontSizePref?.setOnPreferenceClickListener {
             FontSizeBottomSheet().apply {
-                // Set listener ke fragment ini
                 setListener(this@ThemeSettingsFragment)
             }.show(childFragmentManager, "font_size")
             true
         }
     }
     
+    private fun updateFontSizeSummary(preference: Preference?) {
+        preference?.summary = ThemeEngine.getInstance(requireContext()).fontSize.displayName
+    }
+    
     override fun onFontSizeChanged(newSize: FontSize) {
+        // Update summary
+        findPreference<Preference>("font_size")?.summary = newSize.displayName
+        // Recreate activity
         requireActivity().recreate()
     }
 

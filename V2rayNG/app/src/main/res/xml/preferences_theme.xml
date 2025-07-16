@@ -47,7 +47,7 @@
         android:key="font_size"
         android:layout="@layout/uwu_mid"
         android:title="@string/font_size"
-        android:summary="@string/font_size_summary"
+        android:summary=""
         android:icon="@drawable/ic_text_size" />
 
     <SwitchPreferenceCompat
