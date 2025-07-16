@@ -23,14 +23,15 @@ class FontSizeBottomSheet : BottomSheetDialogFragment() {
     private lateinit var engine: ThemeEngine
     private var listener: FontSizeChangeListener? = null
 
+    // Tambahkan metode untuk mengatur listener secara manual
+    fun setListener(listener: FontSizeChangeListener) {
+        this.listener = listener
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
         engine = ThemeEngine.getInstance(context)
-        if (context is FontSizeChangeListener) {
-            listener = context
-        } else {
-            throw RuntimeException("$context must implement FontSizeChangeListener")
-        }
+        // Hapus pengecekan yang memaksa Activity mengimplementasikan listener
     }
 
     override fun onCreateView(

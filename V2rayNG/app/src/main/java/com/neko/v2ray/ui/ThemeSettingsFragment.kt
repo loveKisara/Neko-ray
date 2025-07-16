@@ -18,7 +18,7 @@ import com.neko.themeengine.hasS
 import com.neko.v2ray.R
 
 class ThemeSettingsFragment : PreferenceFragmentCompat(),
-    FontSizeChangeListener {
+    FontSizeBottomSheet.FontSizeChangeListener {
 
     private lateinit var themeEngine: ThemeEngine
     private var contrastPref: DropDownPreference? = null
@@ -60,34 +60,34 @@ class ThemeSettingsFragment : PreferenceFragmentCompat(),
         }
     }
     
-    private fun setupContrastPreference() {
-        contrastPref = findPreference("contrast_level")
-    
-        contrastPref?.apply {
-            val currentContrast = themeEngine.staticTheme.contrastLevel.name
-            value = currentContrast
-    
-            val index = findIndexOfValue(currentContrast)
-            if (index >= 0) summary = entries[index]
-    
-            setOnPreferenceChangeListener { preference, newValue ->
-                val dropdown = preference as DropDownPreference
-                val newLevel = ContrastLevel.valueOf(newValue as String)
-    
-                themeEngine.switchContrast(newLevel)
-    
-                val newIndex = dropdown.findIndexOfValue(newValue)
-                if (newIndex >= 0) dropdown.summary = dropdown.entries[newIndex]
-    
-                requireActivity().recreate()
-                true
-            }
-        }
-    
-        if (themeEngine.isDynamicTheme) {
-            contrastPref?.let { preferenceScreen.removePreference(it) }
+private fun setupContrastPreference() {
+    contrastPref = findPreference("contrast_level")
+
+    contrastPref?.apply {
+        val currentContrast = themeEngine.staticTheme.contrastLevel.name
+        value = currentContrast
+
+        val index = findIndexOfValue(currentContrast)
+        if (index >= 0) summary = entries[index]
+
+        setOnPreferenceChangeListener { preference, newValue ->
+            val dropdown = preference as DropDownPreference
+            val newLevel = ContrastLevel.valueOf(newValue as String)
+
+            themeEngine.switchContrast(newLevel)
+
+            val newIndex = dropdown.findIndexOfValue(newValue)
+            if (newIndex >= 0) dropdown.summary = dropdown.entries[newIndex]
+
+            requireActivity().recreate()
+            true
         }
     }
+
+    if (themeEngine.isDynamicTheme) {
+        contrastPref?.let { preferenceScreen.removePreference(it) }
+    }
+}
 
     private fun setupDarkMode() {
         findPreference<DropDownPreference>("dark_mode")?.apply {
@@ -214,11 +214,14 @@ class ThemeSettingsFragment : PreferenceFragmentCompat(),
 
     private fun setupFontSizePreference() {
         findPreference<Preference>("font_size")?.setOnPreferenceClickListener {
-            FontSizeBottomSheet().show(childFragmentManager, "font_size")
+            FontSizeBottomSheet().apply {
+                // Set listener ke fragment ini
+                setListener(this@ThemeSettingsFragment)
+            }.show(childFragmentManager, "font_size")
             true
         }
     }
-
+    
     override fun onFontSizeChanged(newSize: FontSize) {
         requireActivity().recreate()
     }
