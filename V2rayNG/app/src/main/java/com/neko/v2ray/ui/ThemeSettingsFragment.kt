@@ -60,34 +60,34 @@ class ThemeSettingsFragment : PreferenceFragmentCompat(),
         }
     }
     
-private fun setupContrastPreference() {
-    contrastPref = findPreference("contrast_level")
-
-    contrastPref?.apply {
-        val currentContrast = themeEngine.staticTheme.contrastLevel.name
-        value = currentContrast
-
-        val index = findIndexOfValue(currentContrast)
-        if (index >= 0) summary = entries[index]
-
-        setOnPreferenceChangeListener { preference, newValue ->
-            val dropdown = preference as DropDownPreference
-            val newLevel = ContrastLevel.valueOf(newValue as String)
-
-            themeEngine.switchContrast(newLevel)
-
-            val newIndex = dropdown.findIndexOfValue(newValue)
-            if (newIndex >= 0) dropdown.summary = dropdown.entries[newIndex]
-
-            requireActivity().recreate()
-            true
+    private fun setupContrastPreference() {
+        contrastPref = findPreference("contrast_level")
+    
+        contrastPref?.apply {
+            val currentContrast = themeEngine.staticTheme.contrastLevel.name
+            value = currentContrast
+    
+            val index = findIndexOfValue(currentContrast)
+            if (index >= 0) summary = entries[index]
+    
+            setOnPreferenceChangeListener { preference, newValue ->
+                val dropdown = preference as DropDownPreference
+                val newLevel = ContrastLevel.valueOf(newValue as String)
+    
+                themeEngine.switchContrast(newLevel)
+    
+                val newIndex = dropdown.findIndexOfValue(newValue)
+                if (newIndex >= 0) dropdown.summary = dropdown.entries[newIndex]
+    
+                requireActivity().recreate()
+                true
+            }
+        }
+    
+        if (themeEngine.isDynamicTheme) {
+            contrastPref?.let { preferenceScreen.removePreference(it) }
         }
     }
-
-    if (themeEngine.isDynamicTheme) {
-        contrastPref?.let { preferenceScreen.removePreference(it) }
-    }
-}
 
     private fun setupDarkMode() {
         findPreference<DropDownPreference>("dark_mode")?.apply {
