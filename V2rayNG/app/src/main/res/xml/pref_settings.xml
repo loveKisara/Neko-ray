@@ -306,16 +306,6 @@
             android:title="@string/title_pref_dns_hosts" />
 
         <ListPreference
-            android:defaultValue="warning"
-            android:icon="@drawable/uwu_ic_math_log"
-            android:entries="@array/core_loglevel"
-            android:layout="@layout/uwu_mid"
-            android:entryValues="@array/core_loglevel"
-            android:key="pref_core_loglevel"
-            android:summary="%s"
-            android:title="@string/title_core_loglevel"/>
-
-        <ListPreference
             android:defaultValue="1"
             android:icon="@drawable/ic_domain_24"
             android:layout="@layout/uwu_mid"
@@ -345,6 +335,16 @@
             android:layout="@layout/uwu_top"
             android:summary="@string/summary_pref_delay_test_url"
             android:title="@string/title_pref_delay_test_url" />
+
+        <ListPreference
+            android:defaultValue="warning"
+            android:icon="@drawable/uwu_ic_math_log"
+            android:entries="@array/core_loglevel"
+            android:layout="@layout/uwu_mid"
+            android:entryValues="@array/core_loglevel"
+            android:key="pref_core_loglevel"
+            android:summary="%s"
+            android:title="@string/title_core_loglevel"/>
 
         <ListPreference
             android:icon="@drawable/uwu_ic_key_outline"
