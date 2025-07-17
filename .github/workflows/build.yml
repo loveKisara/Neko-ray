@@ -163,11 +163,17 @@ jobs:
         name: Universal
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*universal.apk
 
+    - name: Login to GitHub CLI
+      if: github.event.inputs.release_tag != ''
+      run: |
+        gh auth login --with-token <<< "${{ secrets.MY_TOKEN }}"
+        gh repo set-default MRT-project/Neko-ray
+    
     - name: Upload to release
       uses: softprops/action-gh-release@v2
       if: github.event.inputs.release_tag != ''
       with:
-        repository: https://github.com/MRT-project/Neko-ray
+        repository: MRT-project/Neko-ray
         token: ${{ secrets.MY_TOKEN }}
         files: |
           ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
@@ -177,4 +183,3 @@ jobs:
           ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*universal.apk
         tag_name: ${{ github.event.inputs.release_tag }}
         make_latest: true
-        generate_release_notes: true
