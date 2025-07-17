@@ -4,7 +4,6 @@ import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
 import android.os.Bundle
-import android.util.Base64
 import android.widget.*
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.appbar.MaterialToolbar
@@ -22,13 +21,37 @@ class V2rayConfigActivity : BaseActivity() {
     private lateinit var btnCopy: ImageView
     private lateinit var spinnerServer: Spinner
 
-    private val base64Urls = listOf(
-        "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01SVC1wcm9qZWN0L3YycmF5LWNvbmZpZ3MvcmVmcy9oZWFkcy9tYWluL0FsbF9Db25maWdzX1N1Yi50eHQ=",
-        "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01SVC1wcm9qZWN0L3YycmF5LWNvbmZpZ3MvcmVmcy9oZWFkcy9tYWluL1N1YjEudHh0",
-        "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01SVC1wcm9qZWN0L3YycmF5LWNvbmZpZ3MvcmVmcy9oZWFkcy9tYWluL1N1YjIudHh0",
-        "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01SVC1wcm9qZWN0L3YycmF5LWNvbmZpZ3MvcmVmcy9oZWFkcy9tYWluL1N1YjMudHh0",
-        "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL01SVC1wcm9qZWN0L3YycmF5LWNvbmZpZ3MvcmVmcy9oZWFkcy9tYWluL1N1YjQudHh0",
-        "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0FMSUlMQVBSTy92MnJheU5HLUNvbmZpZy9tYWluL3NlcnZlci50eHQ="
+    private val serverUrls = mapOf(
+        "Australia" to "https://raw.githubusercontent.com/Epodonios/bulk-xray-v2ray-vless-vmess-...-configs/refs/heads/main/sub/Australia/config.txt",
+        "Austria" to "gg",
+        "Bahrain" to "gg",
+        "Brazil" to "gg",
+        "Colombia" to "gg",
+        "Costa Rica" to "gg",
+        "Czech Republic" to "gg",
+        "Finland" to "gg",
+        "France" to "gg",
+        "Germany" to "gg",
+        "Hong Kong" to "gg",
+        "India" to "gg",
+        "Iran" to "gg",
+        "Italy" to "gg",
+        "Japan" to "gg",
+        "Netherlands" to "gg",
+        "Poland" to "gg",
+        "Republic of Korea" to "gg",
+        "Republic of Lithuania" to "gg",
+        "Russia" to "gg",
+        "Serbia" to "gg",
+        "Singapore" to "gg",
+        "Slovak Republic" to "gg",
+        "Spain" to "gg",
+        "Sweden" to "gg",
+        "Switzerland" to "gg",
+        "Turkey" to "gg",
+        "United Arab Emirates" to "gg",
+        "United Kingdom" to "gg",
+        "United States" to "gg"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,7 +69,7 @@ class V2rayConfigActivity : BaseActivity() {
         btnCopy = findViewById(R.id.btnCopy)
         spinnerServer = findViewById(R.id.spinnerServer)
 
-        val serverNames = base64Urls.indices.map { "Server ${it + 1}" }
+        val serverNames = serverUrls.keys.toList()
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, serverNames)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spinnerServer.adapter = adapter
@@ -54,10 +77,9 @@ class V2rayConfigActivity : BaseActivity() {
         btnGenerate.setOnClickListener {
             textLoading.text = "Loading..."
             textConfig.text = ""
-            val selectedIndex = spinnerServer.selectedItemPosition
-            val encodedUrl = base64Urls[selectedIndex]
-            val decodedUrl = String(Base64.decode(encodedUrl, Base64.DEFAULT))
-            fetchV2rayConfigFrom(decodedUrl)
+            val selectedCountry = spinnerServer.selectedItem as String
+            val configUrl = serverUrls[selectedCountry] ?: return@setOnClickListener
+            fetchV2rayConfigFrom(configUrl)
         }
 
         btnCopy.setOnClickListener {

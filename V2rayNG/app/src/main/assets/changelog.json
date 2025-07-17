@@ -1,5 +1,17 @@
 [
     {
+        "version": "1.10.9",
+        "date": "2025-07-17",
+        "changes": [
+            "Adding neko web support",
+            "Adding theme change font size",
+            "Fix export count",
+            "Adding intelligent selection method setting",
+            "Move log level pref to advanced settings",
+            "Fix vpn protected failed"
+        ]
+    },
+    {
         "version": "1.10.8",
         "date": "2025-07-01",
         "changes": [
