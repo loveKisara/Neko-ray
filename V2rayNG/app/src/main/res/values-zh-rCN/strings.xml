@@ -3,8 +3,8 @@
     <string name="app_widget_name">开关</string>
     <string name="app_tile_name">开关</string>
     <string name="app_tile_first_use">初次使用此功能请先用 APP 添加配置</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="migration_success">数据迁移成功!</string>
     <string name="migration_fail">数据迁移失败啦!</string>
     <string name="pull_down_to_refresh">请下拉刷新!</string>
@@ -240,7 +240,7 @@
     <string name="title_ui_settings">用户界面设置</string>
     <string name="title_pref_ui_mode_night">界面颜色设置</string>
 
-    <string name="title_logcat">Logcat</string>
+    <string name="title_logcat">日志</string>
     <string name="logcat_copy">复制</string>
     <string name="logcat_clear">清除</string>
     <string name="title_service_restart">服务重启</string>
@@ -298,23 +298,22 @@
     <string name="connection_test_error_status_code">"状态码无效（#%d）"</string>
     <string name="connection_connected">"已连接，点击测试连接"</string>
     <string name="connection_not_connected">"未连接"</string>
-
-    <string name="import_subscription_success">Subscription imported Successfully</string>
-    <string name="import_subscription_failure">Import subscription failed</string>
-    <string name="title_fragment_settings">Fragment Settings</string>
-    <string name="title_pref_fragment_packets">Fragment Packets</string>
-    <string name="title_pref_fragment_length">Fragment Length (min-max)</string>
-    <string name="title_pref_fragment_interval">Fragment Interval (min-max)</string>
-    <string name="title_pref_fragment_enabled">Enable Fragment</string>
-
-    <string name="update_check_for_update">Check for update</string>
-    <string name="update_already_latest_version">Already on the latest version</string>
-    <string name="update_new_version_found">New version found: %s</string>
-    <string name="update_now">Update now</string>
-    <string name="update_check_pre_release">Check Pre-release</string>
-    <string name="intelligent_selection">Intelligent Selection</string>
-    <string name="sub_setting_intelligent_selection_filter">Remarks Intelligent Selection regular filter</string>
-    <string name="title_intelligent_selection_method">Intelligent Selection Method</string>
+    <string name="import_subscription_success">订阅导入成功</string>
+    <string name="import_subscription_failure">导入订阅失败</string>
+    <string name="menu_item_add_asset">添加</string>
+    <string name="menu_item_add_url">添加链接</string>
+    <string name="title_fragment_settings">分片（Fragment）设置</string>
+    <string name="title_pref_fragment_packets">分片方式</string>
+    <string name="title_pref_fragment_length">分片包长（最小 - 最大）</string>
+    <string name="title_pref_fragment_interval">分片间隔（最小 - 最大）</string>
+    <string name="title_pref_fragment_enabled">启用分片（Fragment）</string>
+    <string name="update_check_for_update">检查更新</string>
+    <string name="update_already_latest_version">目前已是最新版本</string>
+    <string name="update_new_version_found">发现新版本: %s</string>
+    <string name="update_now">立即更新</string>
+    <string name="update_check_pre_release">检查 Pre-release</string>
+    <string name="sub_setting_intelligent_selection_filter">备注智能选择常规过滤器</string>
+    <string name="title_intelligent_selection_method">智能选择方法</string>
     <string-array name="intelligent_selection_method">
         <item>Least Ping</item>
         <item>Least Load</item>
@@ -322,16 +321,16 @@
 
     <!-- Neko strings -->
     <string name="title_theme_settings">主题设置</string>
-    <string name="title_choose_theme">Choose Color Theme</string>
-    <string name="uwu_header_title">Hi, </string>
-    <string name="uwu_edit">Edit</string>
+    <string name="title_choose_theme">选择颜色主题</string>
+    <string name="uwu_header_title">你好, </string>
+    <string name="uwu_edit">编辑</string>
     <string name="uwu_credits">致谢</string>
-    <string name="uwu_about">About Apps</string>
-    <string name="uwu_tools">Tools</string>
-    <string name="uwu_information_cat">Information</string>
-    <string name="uwu_neko_version">App Version</string>
-    <string name="uwu_build_type">Build Type</string>
-    <string name="uwu_build_date">Build Date</string>
+    <string name="uwu_about">关于APP</string>
+    <string name="uwu_tools">工具</string>
+    <string name="uwu_information_cat">信息</string>
+    <string name="uwu_neko_version">应用版本</string>
+    <string name="uwu_build_type">构建类型</string>
+    <string name="uwu_build_date">构建日期</string>
     <string name="uwu_recommended_os_cat">推荐的操作系统</string>
     <string name="uwu_version_sdk_minimum">最小SDK版本</string>
     <string name="uwu_version_sdk_target">目标SDK版本</string>
@@ -437,7 +436,7 @@
     <string name="uwu_email_dialog">邮箱不能为空</string>
     <string name="uwu_daftar_message">请填写您的个人数据，以便能够使用Neko-Ray应用程序。</string>
     <string name="uwu_settings_summary">Neko-ray设置 VPN 用于您的手机</string>
-    <string name="uwu_logcat_summary">Logcat 用于 Neko-ray</string>
+    <string name="uwu_logcat_summary">日志用于 Neko-ray</string>
     <string name="uwu_network_summary">更改您的网络类型电话信息</string>
     <string name="uwu_backup_summary">备份 还原或分享您的配置</string>
     <string name="uwu_hostip_summary">主机到IP转换</string>
@@ -533,5 +532,28 @@
     <string name="uwu_support_title">支持Neko-ray</string>
     <string name="uwu_support_summary">向Neko-Ray开发人员捐款一点</string>
     <string name="font_size">字体大小</string>
+    <string name="welcome">欢迎来到</string>
+    <string name="welcome_a">Neko-ray是Android的V2RAR客户端，支持Xray核心和V2Fly核心</string>
+    <string name="skip">跳过</string>
+    <string name="next">下一个</string>
+    <string name="v2ray_uwu">V2Ray 安卓客户端 拥有来自UWU团队的优美UI风格</string>
+    <string name="code_and_more">用gradle kotlin Java代码和更多</string>
+    <string name="start">开始</string>
+    <string name="input_a_hostname_here">在此处输入主机名</string>
+    <string name="lookup">查找</string>
+    <string name="results">结果:</string>
+    <string name="select_your_options_below">在下面选择您的选项！</string>
+    <string name="free_config">免费配置</string>
+    <string name="get_free_config_for_neko_ray">获取Neko-Ray的免费配置</string>
+    <string name="generate">生成</string>
+    <string name="download">下载</string>
+    <string name="upload">上传</string>
+    <string name="start">开始</string>
+    <string name="stop">暂停</string>
+    <string name="jitter">抖动</string>
+    <string name="server_name">服务器名称</string>
+    <string name="status">状态</string>
+    <string name="font">字体</string>
+    <string name="pilih_font_aplikasi">选择应用字体</string>
     <!-- Neko strings -->
 </resources>
