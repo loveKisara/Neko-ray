@@ -554,5 +554,8 @@
     <string name="status">状态</string>
     <string name="font">字体</string>
     <string name="pilih_font_aplikasi">选择应用字体</string>
+    <string name="enter_host_or_domain">输入主机或域</string>
+    <string name="uwu_on">自动刷新：ON</string>
+    <string name="uwu_off">自动刷新：关闭</string>
     <!-- Neko strings -->
 </resources>
