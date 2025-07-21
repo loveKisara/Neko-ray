@@ -587,5 +587,8 @@
     <string name="status">Status</string>
     <string name="font">Font</string>
     <string name="pilih_font_aplikasi">Pilih font aplikasi</string>
+    <string name="enter_host_or_domain">Enter host or domain</string>
+    <string name="uwu_on">Auto Refresh: ON</string>
+    <string name="uwu_off">Auto Refresh: OFF</string>
     <!-- Neko strings -->
 </resources>
