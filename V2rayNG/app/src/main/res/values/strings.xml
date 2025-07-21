@@ -565,5 +565,28 @@
     <string name="uwu_support_title">Support Neko-Ray</string>
     <string name="uwu_support_summary">Give a little donation to the Neko-Ray developers</string>
     <string name="font_size">Font size</string>
+    <string name="welcome">Welcome to</string>
+    <string name="welcome_a">Neko-ray, A V2Ray client for Android, support Xray core and v2fly core.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="v2ray_uwu">V2Ray client for Android With a beautiful UI style from the UWU team</string>
+    <string name="code_and_more">Made with Gradle kotlin java code and more</string>
+    <string name="start">Start</string>
+    <string name="input_a_hostname_here">Input a HostName here</string>
+    <string name="lookup">Lookup</string>
+    <string name="results">Results:</string>
+    <string name="select_your_options_below">Select your options below!</string>
+    <string name="free_config">Free Config</string>
+    <string name="get_free_config_for_neko_ray">Get free config for Neko-ray</string>
+    <string name="generate">Generate</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="jitter">Jitter</string>
+    <string name="server_name">Server Name</string>
+    <string name="status">Status</string>
+    <string name="font">Font</string>
+    <string name="pilih_font_aplikasi">Pilih font aplikasi</string>
     <!-- Neko strings -->
 </resources>
