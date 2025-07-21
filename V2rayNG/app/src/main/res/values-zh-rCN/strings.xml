@@ -548,7 +548,6 @@
     <string name="generate">生成</string>
     <string name="download">下载</string>
     <string name="upload">上传</string>
-    <string name="start">开始</string>
     <string name="stop">暂停</string>
     <string name="jitter">抖动</string>
     <string name="server_name">服务器名称</string>
