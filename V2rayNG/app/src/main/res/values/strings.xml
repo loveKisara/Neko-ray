@@ -571,7 +571,6 @@
     <string name="next">Next</string>
     <string name="v2ray_uwu">V2Ray client for Android With a beautiful UI style from the UWU team</string>
     <string name="code_and_more">Made with Gradle kotlin java code and more</string>
-    <string name="start">Start</string>
     <string name="input_a_hostname_here">Input a HostName here</string>
     <string name="lookup">Lookup</string>
     <string name="results">Results:</string>
