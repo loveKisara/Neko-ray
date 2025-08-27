@@ -557,5 +557,6 @@
     <string name="enter_host_or_domain">输入主机或域</string>
     <string name="uwu_on">自动刷新：ON</string>
     <string name="uwu_off">自动刷新：关闭</string>
+    <string name="title_create_intelligent_selection_all_server">创建智能选择当前分组配置</string>
     <!-- Neko strings -->
 </resources>
