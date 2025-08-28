@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Neko-ray</string>
+    <string
+        name="app_name"
+        translatable="false">Neko-ray</string>
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -65,7 +67,9 @@
     <string name="server_lab_path_kcp">kcp seed</string>
     <string name="server_lab_path_grpc">gRPC serviceName</string>
     <string name="server_lab_stream_security">TLS</string>
-    <string name="server_lab_stream_fingerprint" translatable="false">Fingerprint</string>
+    <string
+        name="server_lab_stream_fingerprint"
+        translatable="false">Fingerprint</string>
     <string name="server_lab_stream_alpn">Alpn</string>
     <string name="server_lab_allow_insecure">allowInsecure</string>
     <string name="server_lab_sni">SNI</string>
@@ -81,7 +85,6 @@
     <string name="server_lab_preshared_key">PreSharedKey(optional)</string>
     <string name="server_lab_short_id">ShortId</string>
     <string name="server_lab_spider_x">SpiderX</string>
-    <string name="server_lab_mldsa65_verify">Mldsa65Verify</string>
     <string name="server_lab_secret_key">SecretKey</string>
     <string name="server_lab_reserved">Reserved(Optional, separated by commas)</string>
     <string name="server_lab_local_address">Local address (optional IPv4/IPv6, separated by commas)</string>
@@ -180,7 +183,6 @@
     <string name="title_pref_vpn_bypass_lan">Does VPN bypass LAN</string>
 
     <string name="title_pref_vpn_interface_address">VPN Interface Address</string>
-    <string name="title_pref_vpn_mtu">VPN MTU (default 1500)</string>
 
     <string name="title_pref_domestic_dns">Domestic DNS (Optional)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
@@ -245,10 +247,6 @@
     <string name="title_language">Language</string>
     <string name="title_ui_settings">UI settings</string>
     <string name="title_pref_ui_mode_night">UI mode settings</string>
-    <string name="title_pref_use_hev_tunnel">Enable New TUN Feature</string>
-    <string name="summary_pref_use_hev_tunnel">When enabled, TUN will use hev-socks5-tunnel; otherwise, it will use badvpn-tun2socks.</string>
-    <string name="title_pref_hev_tunnel_loglevel">Hev Tun Log Level</string>
-    <string name="title_pref_hev_tunnel_rw_timeout">Hev Tun Read/Write Timeout (ms, default 300000)</string>
 
     <string name="title_logcat">Logcat</string>
     <string name="logcat_copy">Copy</string>
@@ -299,14 +297,30 @@
     <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
     <string name="routing_settings_export_rulesets_to_clipboard">Export ruleset to clipboard</string>
     <string name="routing_settings_locked">Locked, keep this rule when import presets</string>
-    <string name="routing_settings_domain" translatable="false">domain</string>
-    <string name="routing_settings_ip" translatable="false">ip</string>
-    <string name="routing_settings_port" translatable="false">port</string>
-    <string name="routing_settings_protocol" translatable="false">protocol</string>
-    <string name="routing_settings_protocol_tip" translatable="false">[http,tls,bittorrent]</string>
-    <string name="routing_settings_network" translatable="false">network</string>
-    <string name="routing_settings_network_tip" translatable="false">[udp|tcp]</string>
-    <string name="routing_settings_outbound_tag" translatable="false">outboundTag</string>
+    <string
+        name="routing_settings_domain"
+        translatable="false">domain</string>
+    <string
+        name="routing_settings_ip"
+        translatable="false">ip</string>
+    <string
+        name="routing_settings_port"
+        translatable="false">port</string>
+    <string
+        name="routing_settings_protocol"
+        translatable="false">protocol</string>
+    <string
+        name="routing_settings_protocol_tip"
+        translatable="false">[http,tls,bittorrent]</string>
+    <string
+        name="routing_settings_network"
+        translatable="false">network</string>
+    <string
+        name="routing_settings_network_tip"
+        translatable="false">[udp|tcp]</string>
+    <string
+        name="routing_settings_outbound_tag"
+        translatable="false">outboundTag</string>
 
     <string name="connection_test_pending">Check Connectivity</string>
     <string name="connection_test_testing">Testing…</string>
@@ -334,7 +348,10 @@
     <string name="intelligent_selection">Intelligent Selection</string>
     <string name="sub_setting_intelligent_selection_filter">Remarks Intelligent Selection regular filter</string>
     <string name="title_intelligent_selection_method">Intelligent Selection Method</string>
-    <string name="pre_resolving_domain">Pre-resolving domain…</string>
+    <string-array name="intelligent_selection_method">
+        <item>Least Ping</item>
+        <item>Least Load</item>
+    </string-array>
 
     <!-- Neko strings -->
     <string name="title_theme_settings">Theme Settings</string>
@@ -492,10 +509,86 @@
     <string name="theme_mode_default_value">0</string>
     <string name="amoled_mode">AMOLED Mode</string>
     <string name="dynamic_color">Dynamic color</string>
+    <string-array name="contrast_level_entries">
+        <item>Default</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+    <string-array name="contrast_level_values">
+        <item>DEFAULT</item>
+        <item>MEDIUM</item>
+        <item>HIGH</item>
+    </string-array>
+    <string-array name="dark_mode_entries">
+        <item>Follow system</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="dark_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="font_names">
+        <item>Default</item>
+        <item>Roboto</item>
+        <item>Lato</item>
+        <item>Wintering</item>
+        <item>Stencil</item>
+        <item>Poppins</item>
+        <item>Mistery</item>
+        <item>Dreamhour</item>
+        <item>Grunell</item>
+        <item>Shirouga</item>
+        <item>Bubblez</item>
+        <item>Japan</item>
+        <item>OnePiece</item>
+    </string-array>
+    <string-array name="font_values">
+        <item>DEFAULT</item>
+        <item>ROBOTO</item>
+        <item>LATO</item>
+        <item>WINTERING</item>
+        <item>STENCIL</item>
+        <item>POPPINS</item>
+        <item>MISTERY</item>
+        <item>DREAMHOUR</item>
+        <item>GRUNELL</item>
+        <item>SHIROUGA</item>
+        <item>BUBBLEZ</item>
+        <item>JAPAN</item>
+        <item>ONEPIECE</item>
+    </string-array>
     <string name="indicator_style_title">Select Indicator Style</string>
     <string name="pref_indicator_style_title">Server Indicator Style</string>
     <string name="pref_indicator_style_summary">Select the active server indicator display</string>
     <string name="uwu_support_title">Support Neko-Ray</string>
     <string name="uwu_support_summary">Give a little donation to the Neko-Ray developers</string>
     <string name="font_size">Font size</string>
+    <string name="welcome">Welcome to</string>
+    <string name="welcome_a">Neko-ray, A V2Ray client for Android, support Xray core and v2fly core.</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="v2ray_uwu">V2Ray client for Android With a beautiful UI style from the UWU team</string>
+    <string name="code_and_more">Made with Gradle kotlin java code and more</string>
+    <string name="input_a_hostname_here">Input a HostName here</string>
+    <string name="lookup">Lookup</string>
+    <string name="results">Results:</string>
+    <string name="select_your_options_below">Select your options below!</string>
+    <string name="free_config">Free Config</string>
+    <string name="get_free_config_for_neko_ray">Get free config for Neko-ray</string>
+    <string name="generate">Generate</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="jitter">Jitter</string>
+    <string name="server_name">Server Name</string>
+    <string name="status">Status</string>
+    <string name="font">Font</string>
+    <string name="pilih_font_aplikasi">Pilih font aplikasi</string>
+    <string name="enter_host_or_domain">Enter host or domain</string>
+    <string name="uwu_on">Auto Refresh: ON</string>
+    <string name="uwu_off">Auto Refresh: OFF</string>
+    <!-- Neko strings -->
 </resources>
