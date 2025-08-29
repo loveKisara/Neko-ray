@@ -541,5 +541,6 @@
     <string name="title_pref_use_hev_tunnel">Enable New TUN Feature</string>
     <string name="title_pref_hev_tunnel_loglevel">Hev Tun Log Level</string>
     <string name="title_pref_hev_tunnel_rw_timeout">Hev Tun Read/Write Timeout (ms, default 300000)</string>
+    <string name="pre_resolving_domain">Pre-resolving domain…</string>
     <!-- Neko strings -->
 </resources>
