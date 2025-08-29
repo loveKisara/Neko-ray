@@ -60,9 +60,22 @@
         <item>高</item>
     </string-array>
 
+    <string-array name="contrast_level_values">
+        <item>DEFAULT</item>
+        <item>MEDIUM</item>
+        <item>HIGH</item>
+    </string-array>
+
     <string-array name="dark_mode_entries">
         <item>跟随系统</item>
         <item>浅色</item>
         <item>深色</item>
     </string-array>
+
+    <string-array name="dark_mode_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
 </resources>
