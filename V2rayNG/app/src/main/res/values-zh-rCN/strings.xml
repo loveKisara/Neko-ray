@@ -320,11 +320,6 @@
     <string name="update_check_pre_release">检查 Pre-release</string>
     <string name="sub_setting_intelligent_selection_filter">备注智能选择常规过滤器</string>
     <string name="title_intelligent_selection_method">智能选择方法</string>
-    <string-array name="intelligent_selection_method">
-        <item>Least Ping</item>
-        <item>Least Load</item>
-    </string-array>
-
     <!-- Neko strings -->
     <string name="title_theme_settings">主题设置</string>
     <string name="title_choose_theme">选择颜色主题</string>
@@ -482,26 +477,6 @@
     <string name="theme_mode_default_value">0</string>
     <string name="amoled_mode">AMOLED 模式</string>
     <string name="dynamic_color">动态颜色</string>
-    <string-array name="contrast_level_entries">
-        <item>预设</item>
-        <item>Medium</item>
-        <item>High</item>
-    </string-array>
-    <string-array name="contrast_level_values">
-        <item>DEFAULT</item>
-        <item>MEDIUM</item>
-        <item>HIGH</item>
-    </string-array>
-    <string-array name="dark_mode_entries">
-        <item>根据系统</item>
-        <item>白天</item>
-        <item>黑夜</item>
-    </string-array>
-    <string-array name="dark_mode_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
     <string-array name="font_names">
         <item>预设</item>
         <item>Roboto</item>
