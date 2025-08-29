@@ -348,11 +348,6 @@
     <string name="intelligent_selection">Intelligent Selection</string>
     <string name="sub_setting_intelligent_selection_filter">Remarks Intelligent Selection regular filter</string>
     <string name="title_intelligent_selection_method">Intelligent Selection Method</string>
-    <string-array name="intelligent_selection_method">
-        <item>Least Ping</item>
-        <item>Least Load</item>
-    </string-array>
-
     <!-- Neko strings -->
     <string name="title_theme_settings">Theme Settings</string>
     <string name="title_choose_theme">Choose Color Theme</string>
@@ -509,56 +504,6 @@
     <string name="theme_mode_default_value">0</string>
     <string name="amoled_mode">AMOLED Mode</string>
     <string name="dynamic_color">Dynamic color</string>
-    <string-array name="contrast_level_entries">
-        <item>Default</item>
-        <item>Medium</item>
-        <item>High</item>
-    </string-array>
-    <string-array name="contrast_level_values">
-        <item>DEFAULT</item>
-        <item>MEDIUM</item>
-        <item>HIGH</item>
-    </string-array>
-    <string-array name="dark_mode_entries">
-        <item>Follow system</item>
-        <item>Light</item>
-        <item>Dark</item>
-    </string-array>
-    <string-array name="dark_mode_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-    <string-array name="font_names">
-        <item>Default</item>
-        <item>Roboto</item>
-        <item>Lato</item>
-        <item>Wintering</item>
-        <item>Stencil</item>
-        <item>Poppins</item>
-        <item>Mistery</item>
-        <item>Dreamhour</item>
-        <item>Grunell</item>
-        <item>Shirouga</item>
-        <item>Bubblez</item>
-        <item>Japan</item>
-        <item>OnePiece</item>
-    </string-array>
-    <string-array name="font_values">
-        <item>DEFAULT</item>
-        <item>ROBOTO</item>
-        <item>LATO</item>
-        <item>WINTERING</item>
-        <item>STENCIL</item>
-        <item>POPPINS</item>
-        <item>MISTERY</item>
-        <item>DREAMHOUR</item>
-        <item>GRUNELL</item>
-        <item>SHIROUGA</item>
-        <item>BUBBLEZ</item>
-        <item>JAPAN</item>
-        <item>ONEPIECE</item>
-    </string-array>
     <string name="indicator_style_title">Select Indicator Style</string>
     <string name="pref_indicator_style_title">Server Indicator Style</string>
     <string name="pref_indicator_style_summary">Select the active server indicator display</string>
