@@ -535,5 +535,11 @@
     <string name="enter_host_or_domain">Enter host or domain</string>
     <string name="uwu_on">Auto Refresh: ON</string>
     <string name="uwu_off">Auto Refresh: OFF</string>
+    <string name="server_lab_mldsa65_verify">Mldsa65Verify</string>
+    <string name="title_pref_vpn_mtu">VPN MTU (default 1500)</string>
+    <string name="summary_pref_use_hev_tunnel">When enabled, TUN will use hev-socks5-tunnel; otherwise, it will use badvpn-tun2socks.</string>
+    <string name="title_pref_use_hev_tunnel">Enable New TUN Feature</string>
+    <string name="title_pref_hev_tunnel_loglevel">Hev Tun Log Level</string>
+    <string name="title_pref_hev_tunnel_rw_timeout">Hev Tun Read/Write Timeout (ms, default 300000)</string>
     <!-- Neko strings -->
 </resources>
