@@ -78,4 +78,20 @@
         <item>2</item>
     </string-array>
 
+    </string-array>
+    <string-array name="font_values">
+        <item>DEFAULT</item>
+        <item>ROBOTO</item>
+        <item>LATO</item>
+        <item>WINTERING</item>
+        <item>STENCIL</item>
+        <item>POPPINS</item>
+        <item>MISTERY</item>
+        <item>DREAMHOUR</item>
+        <item>GRUNELL</item>
+        <item>SHIROUGA</item>
+        <item>BUBBLEZ</item>
+        <item>JAPAN</item>
+        <item>ONEPIECE</item>
+    </string-array>
 </resources>
